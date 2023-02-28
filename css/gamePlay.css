@@ -1,35 +1,128 @@
-.h1 {
+h1 {
     text-align: center;
-    /* background:  */
+    background-color: rgb(24, 31, 39, .8);
+    display: table;
     font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
     /* font-size: 4em; */
-    padding: 1%;
+    color: #b4c7c9;
+    padding: auto;
     margin-bottom: 1%;
+    margin-left: 10%;
+    margin-right: auto;
 }
 
-.footer {
-    text-align: center;
-    /* background:  */
-    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
-    /* font-size: 4em; */
-    padding: 1%;
-    margin-bottom: 1%;
+li {
+    display: inline-block;
 }
 
-#pagelinks {
-    text-align: center;
+
+body {
+    background: url(../img/background.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    object-fit: cover; 
+  }
+
+footer {
+    /* text-align: center; */
+    background-color: rgb(24, 31, 39, .8);
+    display: table;
+    /* font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif; */
+    /* font-size: 4em; */
+    /* color: #b4c7c9; */
+    /* padding: 1%; */
+    /* margin-bottom: 1%; */
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#pageLinks {
+    /* text-align: center; */
+    list-style-type: none;
+    /* display: ; */
     /* background:  */
+    background-color: rgb(24, 31, 39, .8);
     font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
     /* font-size: 4em; */
-    padding: 1%;
-    margin-bottom: 1%;
+    color: #b4c7c9;
+    /* padding: 1%; */
+    margin: 0;
+    padding: 0;
+    /* margin-bottom: 1%; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#home {
+    display: table;
+    background-color: rgb(24, 31, 39, .8);
+    float: inline-start
+    margin-left: 10%;
+    margin-right: auto;
+}
+
+#highScore {
+    display: table;
+    background-color: rgb(24, 31, 39, .8);
+    float: inline-end;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#aboutUs {
+    display: table;
+    background-color: rgb(24, 31, 39, .8);
+    float: inline-end;
+    margin-left: auto;
+    margin-right: 10%;
 }
 
 #introText {
-    text-align: center;
+    text-align: left;
     /* background:  */
     font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
     /* font-size: 4em; */
+    color: #b4c7c9;
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+#option1 {
+    /* text-align: center; */
+    display: inline-block;
+    /* background:  */
+    background-color: rgb(24, 31, 39, .8);
+    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
+    /* font-size: 4em; */
+    color: #b4c7c9;
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+#option2 {
+    /* text-align: center; */
+    display: inline-block;
+    /* background:  */
+    background-color: rgb(24, 31, 39, .8);
+    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
+    /* font-size: 4em; */
+    color: #b4c7c9;
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+#option3 {
+    /* text-align: center; */
+    display: inline-block;
+    /* background:  */
+    background-color: rgb(24, 31, 39, .8);
+    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
+    /* font-size: 4em; */
+    color: #b4c7c9;
     padding: 1%;
     margin-bottom: 1%;
 }
@@ -37,8 +130,10 @@
 #chose1 {
     text-align: center;
     /* background:  */
+    background-color: rgb(24, 31, 39, .8);
     font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
     /* font-size: 4em; */
+    color: #b4c7c9;
     padding: 1%;
     margin-bottom: 1%;
 }
@@ -46,8 +141,10 @@
 #chose2 {
     text-align: center;
     /* background:  */
+    background-color: rgb(24, 31, 39, .8);
     font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
     /* font-size: 4em; */
+    color: #b4c7c9;
     padding: 1%;
     margin-bottom: 1%;
 }
@@ -55,9 +152,17 @@
 #chose3 {
     text-align: center;
     /* background:  */
+    background-color: rgb(24, 31, 39, .8);
     font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
     /* font-size: 4em; */
+    color: #b4c7c9;
     padding: 1%;
     margin-bottom: 1%;
 }
 
+#copyright {
+    background-color: rgb(24, 31, 39, .8);    
+    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
+    /* font-size: 4em; */
+    color: #b4c7c9;
+}
