@@ -44,12 +44,12 @@ function handleFormSubmit(event) {
   // console.log(startingLocation);
 
   let newAdventurer = new Adventurer(name, sex, startingLocation);
-  adventurerArray.push(newAdventurer);
+  adventurerArray.unshift(newAdventurer);
   // Todo: Place new Adventurer into Local Storage
   let stringifiedAventurer = JSON.stringify(adventurerArray);
   console.log(stringifiedAventurer);
 
-  localStorage.setItem('newChara', stringifiedAventurer);
+  localStorage.setItem('newAdventurer', stringifiedAventurer);
 }
 
 // ******************************** OBJECT LITERALS ******************************
