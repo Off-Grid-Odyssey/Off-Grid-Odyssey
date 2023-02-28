@@ -4,7 +4,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    
+
 }
 
 h1 {
@@ -20,6 +20,7 @@ nav {
 a {
     color: #b4c7c9;
 }
+
 .introSection {
     font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
     color: #b4c7c9;
@@ -31,27 +32,45 @@ a {
     padding: 1%;
     border: solid #b4c7c9;
 }
-.storyText{
-    
-}
-.optionSectionContainer{
-    padding-top: 2%;
-}
-.optionContainer{
-    padding: 3%;
+
+.storyText {
+    font-weight: bolder;
+
 }
 
-.buttonContainer{
+.optionSectionContainer {
+    padding-top: 2%;
+}
+
+.optionContainer {
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.optionTitle {
+    font-weight: bold;
+    padding-bottom: .5%;
+}
+
+.optionsText {
+    border: #b4c7c9 3px solid;
+    padding: 1%;
+}
+
+.buttonContainer {
     display: flex;
     justify-content: space-around;
     margin-top: 1%;
 }
-.buttonOption{
-padding: 2%;
-background-color: #181f27;
-margin-top: 1%;
+
+.buttonOption {
+    padding: 2%;
+    background-color: #181f27;
+    margin-top: 1%;
 }
-.buttonOption:hover{
+
+.buttonOption:hover {
     transform: scale(1.1);
     background-color: rgba(18, 23, 29, 0.8);
 
@@ -68,7 +87,7 @@ body {
 }
 
 footer {
-    
+
     background-color: rgb(24, 31, 39, .8);
     display: table;
     margin-left: auto;
@@ -78,68 +97,7 @@ footer {
 
 
 
-#option1 {
-    display: inline-block;
-    background-color: rgb(24, 31, 39, .8);
-    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
-    color: #b4c7c9;
-    padding: 1%;
-    margin-bottom: 1%;
-}
 
-#option2 {
-    display: inline-block;
-    background-color: rgb(24, 31, 39, .8);
-    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
-    color: #b4c7c9;
-    padding: 1%;
-    margin-bottom: 1%;
-}
-
-#option3 {
-    /* text-align: center; */
-    display: inline-block;
-    /* background:  */
-    background-color: rgb(24, 31, 39, .8);
-    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
-    /* font-size: 4em; */
-    color: #b4c7c9;
-    padding: 1%;
-    margin-bottom: 1%;
-}
-
-#chose1 {
-    text-align: center;
-    /* background:  */
-    background-color: rgb(24, 31, 39, .8);
-    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
-    /* font-size: 4em; */
-    color: #b4c7c9;
-    padding: 1%;
-    margin-bottom: 1%;
-}
-
-#chose2 {
-    text-align: center;
-    /* background:  */
-    background-color: rgb(24, 31, 39, .8);
-    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
-    /* font-size: 4em; */
-    color: #b4c7c9;
-    padding: 1%;
-    margin-bottom: 1%;
-}
-
-#chose3 {
-    text-align: center;
-    /* background:  */
-    background-color: rgb(24, 31, 39, .8);
-    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
-    /* font-size: 4em; */
-    color: #b4c7c9;
-    padding: 1%;
-    margin-bottom: 1%;
-}
 
 #copyright {
     background-color: rgb(24, 31, 39, .8);
