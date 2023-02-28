@@ -1,10 +1,11 @@
 body {
   background: url(../img/background.jpg);
-  /* -webkit-background-size: cover;
+  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  object-fit: cover;  */
+  object-fit: cover; 
+  margin 50px;
 }
 
 header{
@@ -30,8 +31,6 @@ li{
 
 a{
   color:#b4c7c9;
-  /* color: #7AF07B; */
-
 }
 
 a:link{
@@ -44,7 +43,7 @@ h2{
 }
 
 img{
-  width: 35vw;
+  width: 37vw;
   height: 70vh;
   border: 3px;
   border-style: ridge; 
@@ -53,13 +52,11 @@ img{
 #top-figure{
   display: flex;
   justify-content: space-evenly;
-  /* width: min-content; */
 }
 
 #bottom-figure{
   display: flex;
   justify-content: space-evenly;
-  /* width: min-content; */
 }
 
  figure {
@@ -69,8 +66,14 @@ img{
 details{
   color: #b4c7c9;
   text-align: center;
-
 }
+
+p{
+  border: solid #b4c7c9;
+  background-color: rgb(24, 31, 39, .8);
+}
+
+
 footer{
   text-align: center;
   color: #b4c7c9;
