@@ -14,7 +14,7 @@ function handleImgClick(event) {
 
     renderImg();
 
-    if(votingRounds === 0) {
+    if (votingRounds === 0) {
         imgContainer.removeEventListener('click', handleImgClick);
 
         // LOCAL STORAGE STARTS HERE
@@ -27,20 +27,16 @@ function handleImgClick(event) {
 }
 // HANDLE RESULTS
 function handleShowResults() {
-    if(votingRounds === 0) {
-      
+    if (votingRounds === 0) {
         renderChart();
 
         resultsBtn.removeEventListener('click', handleShowResults);
     }
 }
-    
-    votingRounds--;
 
-    renderOption();
+votingRounds--;
 
-    if(votingRounds === 0) {
-        imgContainer.removeEventListener('click', handleImgClick);
+renderOption();
 
         // LOCAL STORAGE STARTS HERE
         let stringifiedOption = JSON.stringify(optionArray);
@@ -55,14 +51,16 @@ if(pickedOption) {
     for(let i = 0; i < parsedOption.length; i++) {
       if(parsedOption[i].name === 'option1') {
         optionArray.push(option1);
+
         } else if (parsedOption[i].name === 'option2') {
             optionArray.push(option2);
         } else (parsedOption[i].name === 'option3') {
             productArray.push(option3);
       }
+
     }
 
-optionArray.push(option1, option2, option3)
+    optionArray.push(option1, option2, option3)
 }
 
 console.log(optionArray)
