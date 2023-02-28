@@ -1,4 +1,4 @@
-// TODO: Need to make the form save the adenturer data that is inputed to local storage
+
 'use strict';
 
 // ****************************** GLOBALS ******************************
