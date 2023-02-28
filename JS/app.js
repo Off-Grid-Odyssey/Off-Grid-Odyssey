@@ -1,3 +1,4 @@
+'use strict';
 
 let playButton = document.getElementById('playButton');
 function handlePlayButton(event){
