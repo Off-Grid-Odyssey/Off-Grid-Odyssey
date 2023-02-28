@@ -2,9 +2,9 @@
 function handleImgClick(event) {
     let imgClick = event.target.title;
 
-    for(let i = 0; i < productArray.length; i++) {
-        if(imgClick === productArray[i].name) {
-                productArray[i].votes++;
+    for(let i = 0; i < optionArray.length; i++) {
+        if(imgClick === optionArray[i].name) {
+            optionArray[i].votes++;
         }
     }
 
@@ -16,11 +16,11 @@ function handleImgClick(event) {
         imgContainer.removeEventListener('click', handleImgClick);
 
         // LOCAL STORAGE STARTS HERE
-        let stringifiedProducts = JSON.stringify(productArray);
+        let stringifiedOption = JSON.stringify(optionArray);
 
-        console.log('Stringified Products >>> ', stringifiedProducts);
+        console.log('Stringified Option >>> ', stringifiedOption);
 
-        localStorage.setItem('myProducts', stringifiedProducts);
+        localStorage.setItem('myOption', stringifiedOption);
     }
 }
 
@@ -41,11 +41,11 @@ function handleShowResults() {
         imgContainer.removeEventListener('click', handleImgClick);
 
         // LOCAL STORAGE STARTS HERE
-        let stringifiedProducts = JSON.stringify(productArray);
+        let stringifiedOption = JSON.stringify(optionArray);
 
-        console.log('Stringified Products >>> ', stringifiedProducts);
+        console.log('Stringified Option >>> ', stringifiedOption);
 
-        localStorage.setItem('myProducts', stringifiedProducts);
+        localStorage.setItem('myOption', stringifiedOption);
     }
 }
 
@@ -54,7 +54,7 @@ if(pickedOption) {
       if(parsedOption[i].name === 'option1') {
         optionArray.push(option1);
         } else if (parsedOption[i].name === 'option2') {
-            productArray.push(option2);
+            optionArray.push(option2);
         } else (parsedOption[i].name === 'option3') {
             productArray.push(option3);
 
