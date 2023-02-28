@@ -1,25 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/gamePlay.css">
     <title>GamePlay</title>
 </head>
+
 <body>
-    <h1>Off-Grid Odyssey</h1>
-    <ul id="pageLinks">
-        <li id="home">Home</li>
-        <li id="highScore">High Score</li>
-        <li id="aboutUs">About Us</li>
-    </ul>
+    <header>
+        <h1>Off-Grid Odyssey</h1>
+        <nav class="pageLinks">
+            <a href="high-score.html">High Scores</a>
+            <a href="index.html">Quit Game</a>
+        </nav>
+    </header>
     <main>
-        <section> 
-            <p id="introText">You wake up in a strange place</p>
-            <p id="option1">Option 1</p>
-            <p id="option1">Option 2</p>
-            <p id="option3">Option 3</p>
+        <section class="introSection">
+            
+            <p class="storyText">You are Captain [Name], a seasoned explorer and captain of your own spaceship. Your latest mission has
+                brought you to the desolate desert planet of Xirra, where you've picked up a distress signal from a
+                remote settlement. As you approach the planet, you see the wreckage of a ship on the surface below. What will you do, Captain [Name]? The fate of Xirra and your own journey rests in your hands.</p>
+
+            <section class="optionSectionContainer">
+                <section class="optionContainer">
+                    <h4 class="optionTitle">Option: 1</h4>
+                    <P id="optionOne">Investigate the shipwreck: You could land your ship and investigate the wreckage
+                        to see if there are any survivors or salvageable equipment.</P>
+                    <div class="">
+                        <p class="buttonOption">Select</p>
+                    </div>
+                </section>
+                <section class="optionContainer">
+                    <h4 class="optionTitle">Option: 2</h4>
+                    <P id="optionTwo">Fly to the settlement: You could bypass the shipwreck and fly directly to the
+                        settlement where the distress signal originated from.</P>
+
+                    <div class="buttonContainer">
+                        <p class="buttonOption">Select</p>
+                    </div>
+                </section>
+                <section class="optionContainer">
+                    <h4 class="optionTitle">Option: 3</h4>
+                    <P id="optionThree">Monitor from a distance: You could stay in orbit and monitor the situation from
+                        a
+                        safe distance, keeping your options open until you know more about the situation.</P>
+                    <div class="buttonContainer">
+                        <p class="buttonOption">Select</p>
+                    </div>
+                </section>
+                <p id="optionFour"></p>
+                <p id="optionFive"></p>
+            </section>
+        </section>
+        <section>
         </section>
         <section>
             <p id="chose1">You chose option 1</p>
@@ -33,4 +70,5 @@
     </footer>
 
 </body>
+
 </html>
