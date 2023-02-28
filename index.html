@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  
+  <header>
+
+    <h1>
+      Off-Grid Odyssey
+    </h1>
+    <nav>
+      <a href="high-score.html">High Scores</a>
+      <a href="aboutus.html">About Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>Embark on a perilous journey through the galaxy in this thrilling text-based adventure game. As a seasoned
+      explorer and captain of your own spaceship, you'll travel to three alien planets, each with its own unique
+      challenges and dangers. Explore desolate deserts, lush forests, and frozen wastelands, uncovering the secrets of a
+      long-lost civilization along the way. But be warned: every decision you make could mean the difference between
+      success and failure. Choose wisely, and you just might save the galaxy from catastrophe. Choose poorly, and you
+      may never make it home. Are you ready for the adventure of a lifetime?</section>
+    <form id="adventurerForm">
+      <fieldset>
+        <legend> Create your adventurers</legend>
+        <label>Adventurers name
+          <input id="name" type="text" name="name" required>
+        </label>
+        <label for="sex"> Adventurers sex
+          <select name="sex" id="sex" required>
+            <option id="male" value="male" >Male</option>
+            <option id="female" value="female" >Female</option>
+            <option id="alien" value="alien" >Alien</option>
+          </select>
+        </label>
+        <label for="startingLocation">Starting Location
+          <select name="startingLocation" id="startingLocation" required>
+            <option id='Xirra' value="Xirra">Xirra</option>
+            <option id="Valtara" value="Valtara">Valtara</option>
+            <option id="Glacius" value="Glacius">Glacius</option>
+            
+          </select>
+        </label>
+      </fieldset>
+      <button id="button" type="submit">Submit</button>
+      <div id="playButton">Click Here To Play</div>
+    </form>
+  </main>
+  <script src="JS/app.js"></script>
+<footer>
+    &#169 Odyssey INC
+</footer>
 </body>
+
 </html>
