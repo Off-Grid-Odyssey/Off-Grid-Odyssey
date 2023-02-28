@@ -4,4 +4,11 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  /* background-repeat: no-repeat; */
+  object-fit: cover; 
+}
+
+div{
+  height: 75px;
+  width: 100px;
 }
