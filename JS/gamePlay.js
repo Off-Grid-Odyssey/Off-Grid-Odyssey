@@ -1,3 +1,5 @@
+'use strict'
+
 // EVENT HANDLERS
 function handleImgClick(event) {
     let imgClick = event.target.title;
@@ -23,7 +25,7 @@ function handleImgClick(event) {
         localStorage.setItem('myOption', stringifiedOption);
     }
 }
-
+// HANDLE RESULTS
 function handleShowResults() {
     if(votingRounds === 0) {
       
@@ -47,8 +49,8 @@ function handleShowResults() {
 
         localStorage.setItem('myOption', stringifiedOption);
     }
-}
-
+    
+//PICKED OPTION
 if(pickedOption) {
     for(let i = 0; i < parsedOption.length; i++) {
       if(parsedOption[i].name === 'option1') {
@@ -57,16 +59,6 @@ if(pickedOption) {
             optionArray.push(option2);
         } else (parsedOption[i].name === 'option3') {
             productArray.push(option3);
-
-    //     let reconstructedSweep = new Product(parsedProducts[i].name, 'png');
-    //     reconstructedSweep.views = parsedProducts[i].views;
-    //     reconstructedSweep.votes = parsedProducts[i].votes;
-    //     productArray.push(reconstructedSweep);
-    //   } else {
-    //       let reconstructedProduct = new Product(parsedProducts[i].name);
-    //       reconstructedProduct.views = parsedProducts[i].views;
-    //       reconstructedProduct.votes = parsedProducts[i].votes;
-    //       productArray.push(reconstructedProduct);
       }
     }
 
