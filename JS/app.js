@@ -31,21 +31,26 @@ function handleFormSubmit(event) {
   event.preventDefault();
 
   console.log(adventurerForm);
+
+  // TODO: Create new Adventurer
+  // adventurerForm.addEventListener('submit',
+  //   function (event) {
+  // event.preventDefault();
+  const name = event.target.name.value;
+  // console.log(name);
+  const sex = event.target.sex.value;
+  // console.log(sex);
+  const startingLocation = event.target.startingLocation.value;
+  // console.log(startingLocation);
+
+  let newAdventurer = new Adventurer(name, sex, startingLocation);
+  adventurerArray.push(newAdventurer);
+  // Todo: Place new Adventurer into Local Storage
+  let stringifiedAventurer = JSON.stringify(adventurerArray);
+  console.log(stringifiedAventurer);
+
+  localStorage.setItem('newChara', stringifiedAventurer);
 }
-// TODO: Create new Adventurer
-adventurerForm.addEventListener('submit',
-  function (event) {
-    event.preventDefault();
-    const name = event.target.name.value;
-    console.log(name);
-    const sex = event.target.sex.value;
-    console.log(sex);
-    const startingLocation = event.target.startingLocation.value;
-    console.log(startingLocation);
-
-    const Adventurer = new Adventurer(name, sex, startingLocation);
-
-  });
 
 // ******************************** OBJECT LITERALS ******************************
 
