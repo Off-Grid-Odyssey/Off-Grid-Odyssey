@@ -23,7 +23,7 @@ function handleImgClick(event) {
 
     renderImg();
 
-    if (hitpoints === 0) {
+    if (points === 0) {
         imgContainer.removeEventListener('click', handleImgClick);
 
         // LOCAL STORAGE STARTS HERE
@@ -36,14 +36,14 @@ function handleImgClick(event) {
 }
 // HANDLE RESULTS OF SCORE
 function handleShowResults() {
-    if (hitpoints === 0) {
+    if (points === 0) {
         renderChart();
 
         resultsBtn.removeEventListener('click', handleShowResults);
     }
 }
 
-hitpoints--;
+points--;
 
 renderOption();
 
