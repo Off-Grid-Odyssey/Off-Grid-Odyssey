@@ -11,7 +11,8 @@ h2{
 
 #high-score-container{
   border: 2px solid;
-  width:fit-content;
-  margin: auto;
+  /* width: */
   height: 250px;
+  margin: auto;
+
 }
