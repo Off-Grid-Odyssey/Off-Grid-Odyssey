@@ -66,8 +66,6 @@ function handleFormSubmit(event) {
 
 
 
-
-
 //! Executable Code
 
 adventurerForm.addEventListener('submit', handleFormSubmit);
