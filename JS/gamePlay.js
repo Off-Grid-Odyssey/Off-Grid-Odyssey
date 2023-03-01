@@ -105,36 +105,6 @@ function invisibleStorys() {
 
 // ******************************** OBJECTS *******************************
 
-let scenario = {
-  one: {
-    investigateStory,
-    exploreWreckageOption,
-    exploreSettlementOption,
-    exploreMountainsOption
-
-  },
-  // two: {
-  //   monitorStory,
-  // },
-  three: {
-    
-  },
-  four: {
-    theFootJourneyToSettlementStory,
-    avoidTravlerOption,
-    approachTravlerOption,
-  },
-  five: {
-
-  }
-};
-
-let scenario2 = {
-  one: {flyStory},
-  two: {flyThroughOption},
-  three: {flyCanyonOption},
-};
-
 
 
 //**********Handler Functions***********
