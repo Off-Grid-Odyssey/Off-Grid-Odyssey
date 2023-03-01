@@ -10,7 +10,7 @@ let parsedScore = JSON.parse(highScore);
 let sortedScore = parsedScore.sort((a,b)=> b-a);
 
 //calling the table where the data will go
-let scoreOutput = document.getElementById('highscore-box');
+let scoreOutput = document.getElementById('highScoreBox');
 
 //creating table Header and appending it to table
 let headerRow = document.createElement('tr');
@@ -36,5 +36,5 @@ let scorePlayer = function(){
   }
 };
 
-//calling the high score function
+//calling the highScore function
 scorePlayer();
