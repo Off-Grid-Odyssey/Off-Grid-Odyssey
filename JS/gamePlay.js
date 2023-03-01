@@ -105,6 +105,7 @@ optionArray.push(investigateShipWreckOption, flyToSettlementOption, monitorSitua
 
 // ******************************** OBJECTS *******************************
 
+
 let scenario = {
   startingStory: {
     text: 'You are Captain [Name], a seasoned explorer and captain of your own spaceship. Your latest mission has brought you to the desolate desert planet of Xirra, where you\'ve picked up a distress signal from a remote settlement. As you approach the planet, you see the wreckage of a ship on the surface below. What will you do, Captain [Name]? The fate of Xirra and your own journey rests in your hands.',
@@ -174,6 +175,7 @@ let scenario = {
   }
 
 };
+
 
 
 
