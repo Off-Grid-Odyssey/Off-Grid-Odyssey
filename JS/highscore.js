@@ -1,44 +1,40 @@
+'use strict';
 //Get data from local storage
-let highScore = localStorage.getItem('scoreArray');
+const highScore = localStorage.getItem('scoreArray');
 
 //Parsing the stringified data
 let parsedScore = JSON.parse(highScore);
 
+
+//Sort the score from largest to smallest
+let sortedScore = parsedScore.sort((a,b)=> b-a);
+
 //calling the table where the data will go
 let scoreOutput = document.getElementById('highscore-box');
 
+//creating table Header and appending it to table
+let headerRow = document.createElement('tr');
+let nameHeader = document.createElement('th');
+nameHeader.textContent = 'Name';
+let scoreHeader = document.createElement('th');
+scoreHeader.textContent = 'Score';
+headerRow.appendChild(nameHeader);
+headerRow.appendChild(nameScore);
+scoreOutput.appendChild(headerRow);
 
-
-
-
-
-
-
-
-
-//Compare new data and put it in order from greatest to least
-
-if (highScore){
-  for(let i = 0; i < parsedScore.length; i++){
-    if(parsedScore[i].name < new Score){
-      parsedScore.splice[i];
-    }
-  }else{
-    //rerender table
+//loop through sorted parsed scores and put scores in table
+let scorePlayer = function(){
+  for(let i = 0; i < sortedScore.length; i++){
+    let row = document.createElement('tr');
+    let name = document.createElement('td');
+    let score = document.createElement('td');
+    score.textContent = sortedScore[i].score;
+    name.textContent = sortedScore[i].name;
+    row.appendChild(name);
+    row.appendChild(score);
+    scoreOutput.appendChild(row);
   }
-}
+};
 
-
-
-
-// // Read data
-// const car = localStorage.getItem('myCar');
-
-// // Remove specific data
-// localStorage.removeItem('myCar');
-
-// localStorage.clear();
-// 3. Create a function to retrieve the high scores from local storage.  
-// 4. Create a function to sort the high scores in descending order.  
-// 5. Create a function to display the high scores in a table.  
-// 6. Create an event listener to call the functions when the page loads.
+//calling the high score function
+scorePlayer();
