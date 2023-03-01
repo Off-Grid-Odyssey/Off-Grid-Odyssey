@@ -19,7 +19,7 @@ nameHeader.textContent = 'Name';
 let scoreHeader = document.createElement('th');
 scoreHeader.textContent = 'Score';
 headerRow.appendChild(nameHeader);
-headerRow.appendChild(nameScore);
+headerRow.appendChild(scoreHeader);
 scoreOutput.appendChild(headerRow);
 
 //loop through sorted parsed scores and put scores in table
