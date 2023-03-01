@@ -51,35 +51,90 @@
 //*******Global*********
 let buttonContainer = document.getElementsByClassName('buttonContainer');
 let buttonOption = document.getElementsByClassName('buttonOption');
+
 let introSection = document.getElementById('introSection');
 let story = document.getElementById('story');
-let story1 = document.getElementById('story1');
-let story2 = document.getElementById('story2');
-let story3 = document.getElementById('story3');
-let optionOne = document.getElementById('optionOne');
-let optionTwo = document.getElementById('optionTwo');
-let optionThree = document.getElementById('optionThree');
+let investigateStory = document.getElementById('investigateStory');
+let flyStory = document.getElementById('flyStory');
+let monitorStory = document.getElementById('monitorStory');
+let exploreWreckageStory = document.getElementById('exploreWreckageStory');
+let theFootJourneyToSettlementStory = document.getElementById('theFootJourneyToSettlementStory');
+let theFootJourneyToMountainStory = document.getElementById('theFootJourneyToMountainStory');
+let theTravlerBarterStory = document.getElementById('theTravlerBarterStory');
+let theTravlerStory = document.getElementById('theTravlerStory');
+let theCrashStory = document.getElementById('theCrashStory');
+let theTravlerTradeStory = document.getElementById('theTravlerTradeStory');
+
+let investigateShipWreckOption = document.getElementById('investigateShipWreckOption');
+let flyToSettlementOption = document.getElementById('flyToSettlementOption');
+let monitorSituationOption = document.getElementById('monitorSituationOption');
+let exploreWreckageOption = document.getElementById('exploreWreckageOption');
+let exploreSettlementOption = document.getElementById('exploreSettlementOption');
+let exploreMountainsOption = document.getElementById('exploreMountainsOption');
+let flyCanyonOption = document.getElementById('flyCanyonOption');
+let flyThroughOption = document.getElementById('flyThroughOption');
+let avoidTravlerOption = document.getElementById('avoidTravlerOption');
+let acceptTradeAsIsOption = document.getElementById('acceptTradeAsIsOption');
+let barterOption = document.getElementById('barterOption');
+let theTownStory = document.getElementById('theTownStory');
+let approachTravlerOption = document.getElementById('approachTravlerOption');
+
 
 //*******Arrays( Place Elements inside Array to remove them))********
 let storyArray = [];
-storyArray.push(story1, story2, story3);
+storyArray.push(investigateStory, flyStory, monitorStory, exploreWreckageStory, theFootJourneyToSettlementStory, theFootJourneyToMountainStory, theCrashStory, theTravlerStory, theTravlerBarterStory, theTravlerTradeStory);
 console.log(storyArray);
 
 let optionArray = [];
-optionArray.push(optionOne, optionTwo, optionThree);
+optionArray.push(investigateShipWreckOption, flyToSettlementOption, monitorSituationOption, exploreWreckageOption, exploreSettlementOption, exploreMountainsOption, flyCanyonOption, flyThroughOption, avoidTravlerOption, acceptTradeAsIsOption, barterOption);
+
 
 //*******Remover Functions********
-function invisibleOptions(){
-  for (let i = 0; i < optionArray.length; i++){
+function invisibleOptions() {
+  for (let i = 0; i < optionArray.length; i++) {
     optionArray[i].remove();
   }
 }
 
-function invisibleStorys(){
-  for(let i = 0; i < storyArray.length; i++){
+function invisibleStorys() {
+  for (let i = 0; i < storyArray.length; i++) {
     storyArray[i].remove();
   }
 }
+
+
+// ******************************** OBJECTS *******************************
+
+let scenario = {
+  one: {
+    investigateStory,
+    exploreWreckageOption,
+    exploreSettlementOption,
+    exploreMountainsOption
+
+  },
+  // two: {
+  //   monitorStory,
+  // },
+  three: {
+    
+  },
+  four: {
+    theFootJourneyToSettlementStory,
+    avoidTravlerOption,
+    approachTravlerOption,
+  },
+  five: {
+
+  }
+};
+
+let scenario2 = {
+  one: {flyStory},
+  two: {flyThroughOption},
+  three: {flyCanyonOption},
+};
+
 
 
 //**********Handler Functions***********
@@ -89,13 +144,13 @@ function handleButtonClick(event) {
   console.log(storyArray);
   console.log(event.target);
   console.log(buttonOption[0]);
-  console.log(story1);
-  if (event.target === buttonOption[0]){
-    introSection.appendChild(story1);
-  } else if (event.target === buttonOption[1]){
-    introSection.appendChild(story2);
-  } else if (event.target === buttonOption[2]){
-    introSection.appendChild(story3);
+  // console.log(story1);
+  if (event.target === buttonOption[0]) {
+    introSection.appendChild(investigateStory);
+  } else if (event.target === buttonOption[1]) {
+    introSection.appendChild(flyStory);
+  } else if (event.target === buttonOption[2]) {
+    introSection.appendChild(monitorStory);
   }
 
   invisibleOptions();
