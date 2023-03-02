@@ -44,6 +44,9 @@ nav {
 a {
   color: #b4c7c9;
 }
+a:link{
+  text-decoration: none;
+}
 
 section {
   color: #b4c7c9;

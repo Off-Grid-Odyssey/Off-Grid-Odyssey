@@ -29,13 +29,17 @@ let changeButtons = function (buttonList) {
     console.log(buttonList);
   }
   score += 10;
-  console.log(score);
+  let parsedUsers= JSON.parse(localStorage.getItem('newAdventurer'));
+  parsedUsers[0].score = score;
+  let stringParsedUsers = JSON.stringify(parsedUsers);
+  localStorage.setItem('newAdventurer', stringParsedUsers);
 };
+
 let advanceTo = function (s) {
   changeButtons(s.buttons);
   changeText(s.text);
 };
-let changeText = function(words) {
+let changeText = function (words) {
   text.innerHTML = words.replace();
 };
 
