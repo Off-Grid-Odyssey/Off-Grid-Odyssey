@@ -39,6 +39,10 @@ let changeButtons = function (buttonList) {
     console.log(buttonList);
   }
   score += 10;
+  let parsedUsers= JSON.parse(localStorage.getItem('newAdventurer'));
+  parsedUsers[0].score = score;
+  let stringParsedUsers = JSON.stringify(parsedUsers);
+  localStorage.setItem('newAdventurer', stringParsedUsers);
   console.log(score);
 };
 // advances the game
