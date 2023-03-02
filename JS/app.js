@@ -57,10 +57,20 @@ function handleFormSubmit(event) {
   let newAdventurer = new Adventurer(name, sex);
   adventurerArray.unshift(newAdventurer);
 
-  let stringifiedAventurer = JSON.stringify(adventurerArray);
-  console.log(stringifiedAventurer);
 
-  localStorage.setItem('newAdventurer', stringifiedAventurer);
+  if(localStorage.getItem('newAdventurer')){
+    let parsedUsers = JSON.parse(localStorage.getItem('newAdventurer'));
+    adventurerArray = parsedUsers;
+    adventurerArray.unshift(newAdventurer);
+    let stringifiedAventurer = JSON.stringify(adventurerArray);
+    console.log(stringifiedAventurer);
+    localStorage.setItem('newAdventurer', stringifiedAventurer);
+  } else {
+    adventurerArray.unshift(newAdventurer);
+    let stringifiedAventurer = JSON.stringify(adventurerArray);
+    console.log(stringifiedAventurer);
+    localStorage.setItem('newAdventurer', stringifiedAventurer);
+  }
 }
 
 // ******************************** OBJECT LITERALS ******************************
