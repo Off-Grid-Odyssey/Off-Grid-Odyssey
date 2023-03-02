@@ -45,6 +45,9 @@ let changeButtons = function (buttonList) {
   localStorage.setItem('newAdventurer', stringParsedUsers);
   console.log(score);
 };
+
+
+
 // advances the game
 let advanceTo = function (s) {
   changeButtons(s.buttons);
@@ -61,7 +64,6 @@ let endGame = function(){
   window.location.replace('index.html');
 };
 //TODO submits score to local storage
-
 //DONE resets story back to the begining
 //DONE navigate back to homepage
 
@@ -84,7 +86,7 @@ let scenario = {
 
   investigateCrash: {
     text: 'As you land your ship near the wreckage you hear a loud crunching sound and your ship shudders. The landing gear has been damaged, and you won\'t be able to take off until it\'s fixed. From your ship it looks as if there isn\'t much salvageable at the wreckage. you notice there is a mountain range with what looks like signs of civilization, and you remember the original town with the distress signal. you wonder where you could go to get parts to repair your ship.',
-    buttons: [['Explore Wreckage', 'advanceTo(scenario.exploreWreckage)'], ['Travel to Town', 'advanceTo(scenario.theTown)']]
+    buttons: [['Explore Wreckage', 'advanceTo(scenario.exploreWreckage)'], ['Travel to Town', 'advanceTo(scenario.theFootJourneyToSettlement)']]
   },
   flyToTown: {
     text: 'You bypass the shipwreck and fly directly to the settlement where the distress signal originated from. However, your ship\'s systems detect an incoming sandstorm in that direction, which could damage your ship and make it difficult to navigate. You\'ll need to be careful and make a decision quickly if you want to reach the settlement before the storm hits. you can either fly straight through the storm risking damage to your flight navigation systems or try flying through the narrow rocky canyon avoiding the storm but you risking crashing into the walls of the canyon. ',
