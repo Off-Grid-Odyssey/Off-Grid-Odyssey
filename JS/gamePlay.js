@@ -39,17 +39,15 @@ let changeButtons = function (buttonList) {
     console.log(buttonList);
   }
   score += 10;
-  let parsedUsers= JSON.parse(localStorage.getItem('newAdventurer'));
-  parsedUsers[0].score = score;
-  let stringParsedUsers = JSON.stringify(parsedUsers);
-  localStorage.setItem('newAdventurer', stringParsedUsers);
+  console.log(score);
 };
-
+// advances the game
 let advanceTo = function (s) {
   changeButtons(s.buttons);
   changeText(s.text);
 };
-let changeText = function (words) {
+// changes text on inner.html
+let changeText = function(words) {
   text.innerHTML = words.replace();
 };
 // end game function resets gameplay and commits player score to highscore page.
