@@ -20,9 +20,10 @@ let renderButton = function () {
 
 // *********************** CONSTRUCTOR FUNCTION ****************
 //TODO: Create new Adventurer constructor function
-function Adventurer(name, sex) {
+function Adventurer(name, sex, startingLocation) {
   this.name = name;
   this.sex = sex;
+  this.startingLocation = startingLocation;
   this.score = 0;
   this.highScore = 0;
 }
@@ -39,10 +40,9 @@ function handleFormSubmit(event) {
 
   // TODO: Create new Adventurer
   let name = event.target.name.value;
-  // console.log(name);
   let sex = event.target.sex.value;
-  // console.log(sex);
-  
+  let startingLocation = event.target.startingLocation.value;
+
 
   if (name !== null) {
     
@@ -52,7 +52,7 @@ function handleFormSubmit(event) {
 
 
   // Todo: Place new Adventurer into Local Storage
-  let newAdventurer = new Adventurer(name, sex);
+  let newAdventurer = new Adventurer(name, sex, startingLocation);
   adventurerArray.unshift(newAdventurer);
 
 
