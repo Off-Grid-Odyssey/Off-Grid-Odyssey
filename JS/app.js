@@ -4,7 +4,7 @@
 // ****************************** GLOBALS ******************************
 
 let adventurerArray = [];
-
+console.log(adventurerArray);
 // ******************************** HELPER FUNCTION *************************
 //TODO: create playbutton event when clicked.
 function handlePlayButton(event) {
@@ -35,15 +35,16 @@ function handleFormSubmit(event) {
   console.log(adventurerForm);
 
   // TODO: Create new Adventurer
-  const name = event.target.name.value;
+  let name = event.target.name.value;
   // console.log(name);
-  const sex = event.target.sex.value;
+  let sex = event.target.sex.value;
   // console.log(sex);
-  const startingLocation = event.target.startingLocation.value;
+  let startingLocation = event.target.startingLocation.value;
   // console.log(startingLocation);
 
   if(name !== null){
     adventurerForm.appendChild(playButton);
+    document.querySelector(adventurerForm).remove();
   }
 
 
