@@ -22,8 +22,14 @@ let nameHeader = document.createElement('th');
 nameHeader.textContent = 'Name';
 let scoreHeader = document.createElement('th');
 scoreHeader.textContent = 'Score';
+let sexHeader = document.createElement('th');
+sexHeader.textContent = 'Sex';
+let startingLocationHeader = document.createElement('th');
+startingLocationHeader.textContent = 'Planet';
 headerRow.appendChild(nameHeader);
 headerRow.appendChild(scoreHeader);
+headerRow.appendChild(sexHeader);
+headerRow.appendChild(startingLocationHeader);
 scoreOutput.appendChild(headerRow);
 
 //loop through sorted parsed scores and put scores in table
@@ -32,10 +38,16 @@ let scorePlayer = function(){
     let row = document.createElement('tr');
     let name = document.createElement('td');
     let score = document.createElement('td');
+    let sex = document.createElement('td');
+    let startingLocation = document.createElement('td');
     score.textContent = sortedScore[i].score;
     name.textContent = sortedScore[i].name;
+    sex.textContent = sortedScore[i].sex;
+    startingLocation.textContent = sortedScore[i].startingLocation;
     row.appendChild(name);
     row.appendChild(score);
+    row.appendChild(sex);
+    row.appendChild(startingLocation);
     scoreOutput.appendChild(row);
   }
 };
