@@ -39,12 +39,17 @@ let changeButtons = function (buttonList) {
     console.log(buttonList);
   }
   score += 10;
+};
+// function to parse data into handleQuitGame
+let saveHighScore = function () {
   let parsedUsers= JSON.parse(localStorage.getItem('newAdventurer'));
   parsedUsers[0].score = score;
   let stringParsedUsers = JSON.stringify(parsedUsers);
   localStorage.setItem('newAdventurer', stringParsedUsers);
-  console.log(score);
+}
+
 };
+
 
 
 
@@ -70,6 +75,7 @@ let endGame = function(){
 
 // ************************** Handler Function ***********************
 function handleQuitGame(event){
+  saveHighScore();
   endGame();
 }
 
@@ -119,7 +125,7 @@ let scenario = {
 
   dieInDesert: {
     text: 'As you push on through the scorching desert, your water supply dwindles rapidly. You feel your throat getting drier with every step, and your lips start to crack and bleed. You try to keep moving, but your legs feel heavy and unresponsive, and your head swims with dizziness. You stumble and fall to your knees, gasping for breath. You know you\'re in trouble. You try to get back up, but your strength fails you. You collapse in the sand, your vision fading to black. Your last thought is a desperate hope that someone will find you before it\'s too late. But in this vast, unforgiving desert, the chances of that seem slim. You close your eyes, and everything goes dark. you can end game or go back and try again.',
-    buttons: [['End Game', 'endGame()'], ['Try again', 'advanceTo(scenario.theFootJourneyToSettlement)'] ]
+    buttons: [['End Game', 'handleQuitGame()'], ['Try again', 'advanceTo(scenario.theFootJourneyToSettlement)'] ]
   },
 
   theFootJourneyToMountain: {
