@@ -25,7 +25,8 @@ console.log(buttonContainer);
 let changeButtons = function (buttonList) {
   buttonContainer[0].innerHTML = "";
   for (let i = 0; i < buttonList.length; i++) {
-    buttonContainer[0].innerHTML += "<button onClick=" + buttonList[i][1] + ">" + buttonList[i][0] + "</button>";
+    buttonContainer[0].innerHTML += '<button onClick=' + buttonList[i][1] + '>' + buttonList[i][0] + '</button>';
+    console.log(buttonList);
   }
   score += 10;
   console.log(score);
