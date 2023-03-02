@@ -29,7 +29,7 @@ a:link{
   text-decoration: none; 
 }
 
-  main{
+main{
   width: 100%;
   height: 500px;
   margin-top: 5%;
@@ -49,6 +49,7 @@ section {
 h1 {
   margin: auto;
   font-size: 3.5em;
+  /* font-family: Phudu; */
 }
 
 h2{
