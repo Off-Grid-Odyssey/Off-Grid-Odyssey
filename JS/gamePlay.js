@@ -35,7 +35,7 @@ let advanceTo = function (s) {
   changeButtons(s.buttons);
   changeText(s.text);
 };
-let changeText = function(words) {
+let changeText = functiongit (words) {
   text.innerHTML = words.replace();
 };
 
