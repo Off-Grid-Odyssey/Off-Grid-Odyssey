@@ -44,6 +44,7 @@ function handleFormSubmit(event) {
 
   if(name !== null){
     adventurerForm.appendChild(playButton);
+    document.querySelector(adventurerForm).remove();
   }
 
 
