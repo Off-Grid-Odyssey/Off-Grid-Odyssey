@@ -22,8 +22,18 @@ let score = 0;
 let text = document.getElementById('text');
 let buttonContainer = document.getElementsByClassName('buttonContainer');
 console.log(buttonContainer);
+let quitButton = document.getElementById('quit');
+let navigate = document.querySelector('nav');
+
+// ***** RENDER BUTTON ******
+let renderButton = function(){
+  navigate.appendChild(quitButton);
+};
+
+// ********************************** HELPER FUNCTIONS ***********************
+// generates buttons for game advancement
 let changeButtons = function (buttonList) {
-  buttonContainer[0].innerHTML = "";
+  buttonContainer[0].innerHTML ="";
   for (let i = 0; i < buttonList.length; i++) {
     buttonContainer[0].innerHTML += '<button onClick=' + buttonList[i][1] + '>' + buttonList[i][0] + '</button>';
     console.log(buttonList);
@@ -31,13 +41,33 @@ let changeButtons = function (buttonList) {
   score += 10;
   console.log(score);
 };
+// advances the game
 let advanceTo = function (s) {
   changeButtons(s.buttons);
   changeText(s.text);
 };
+// changes text on inner.html
 let changeText = function(words) {
   text.innerHTML = words.replace();
 };
+// end game function resets gameplay and commits player score to highscore page.
+// TODO create the endgame function
+let endGame = function(){
+  // advanceTo(scenario.startingStory);
+  window.location.replace('index.html');
+};
+//TODO submits score to local storage
+
+//DONE resets story back to the begining
+//DONE navigate back to homepage
+
+
+// ************************** Handler Function ***********************
+function handleQuitGame(event){
+  endGame();
+}
+
+
 
 // ******************************** OBJECTS *******************************
 
@@ -45,13 +75,12 @@ let changeText = function(words) {
 let scenario = {
   startingStory: {
     text: 'You are Captain [Name], a seasoned explorer and captain of your own spaceship. Your latest mission has brought you to the desolate desert planet of Xirra, where you\'ve picked up a distress signal from a remote settlement. As you approach the planet, you see the wreckage of a ship on the surface below. What will you do, Captain [Name]? The fate of Xirra and your own journey rests in your hands.',
-    buttons:
-      [['Investigate Shipwreck', 'advanceTo(scenario.investigateCrash)'], ['Fly to Settlement', 'advanceTo(scenario.flyToTown)'], ['Monitor from orbit', 'advanceTo(scenario.monitor)']]
+    buttons: [['Investigate Shipwreck', 'advanceTo(scenario.investigateCrash)'], ['Fly to Settlement', 'advanceTo(scenario.flyToTown)'], ['Monitor from orbit', 'advanceTo(scenario.monitor)']]
   },
 
   investigateCrash: {
     text: 'As you land your ship near the wreckage you hear a loud crunching sound and your ship shudders. The landing gear has been damaged, and you won\'t be able to take off until it\'s fixed. From your ship it looks as if there isn\'t much salvageable at the wreckage. you notice there is a mountain range with what looks like signs of civilization, and you remember the original town with the distress signal. you wonder where you could go to get parts to repair your ship.',
-    buttons: [['Explore Wreckage', 'advanceTo(scenario.exploreWreckage)'], ['Travel to Mountains', 'advanceTo(scenario.theFootJourneyToMountain)'], ['Travel to Town', 'advanceTo(scenario.theTown)']]
+    buttons: [['Explore Wreckage', 'advanceTo(scenario.exploreWreckage)'], ['Travel to Town', 'advanceTo(scenario.theTown)']]
   },
   flyToTown: {
     text: 'You bypass the shipwreck and fly directly to the settlement where the distress signal originated from. However, your ship\'s systems detect an incoming sandstorm in that direction, which could damage your ship and make it difficult to navigate. You\'ll need to be careful and make a decision quickly if you want to reach the settlement before the storm hits. you can either fly straight through the storm risking damage to your flight navigation systems or try flying through the narrow rocky canyon avoiding the storm but you risking crashing into the walls of the canyon. ',
@@ -83,7 +112,8 @@ let scenario = {
   },
 
   dieInDesert: {
-    text: 'As you push on through the scorching desert, your water supply dwindles rapidly. You feel your throat getting drier with every step, and your lips start to crack and bleed. You try to keep moving, but your legs feel heavy and unresponsive, and your head swims with dizziness. You stumble and fall to your knees, gasping for breath. You know you\'re in trouble. You try to get back up, but your strength fails you. You collapse in the sand, your vision fading to black. Your last thought is a desperate hope that someone will find you before it\'s too late. But in this vast, unforgiving desert, the chances of that seem slim. You close your eyes, and everything goes dark.'
+    text: 'As you push on through the scorching desert, your water supply dwindles rapidly. You feel your throat getting drier with every step, and your lips start to crack and bleed. You try to keep moving, but your legs feel heavy and unresponsive, and your head swims with dizziness. You stumble and fall to your knees, gasping for breath. You know you\'re in trouble. You try to get back up, but your strength fails you. You collapse in the sand, your vision fading to black. Your last thought is a desperate hope that someone will find you before it\'s too late. But in this vast, unforgiving desert, the chances of that seem slim. You close your eyes, and everything goes dark. you can end game or go back and try again.',
+    buttons: [['End Game', 'endGame()'], ['Try again', 'advanceTo(scenario.theFootJourneyToSettlement)'] ]
   },
 
   theFootJourneyToMountain: {
@@ -104,7 +134,7 @@ let scenario = {
 
   theTravlerBarterStory: {
     text: 'you try to negotiate the price, and after some haggling, he agrees to sell you the food and for a mere 50 credits. You hand over the credits, and Ali hands you the supplies. You feel relieved and grateful to have found some sustenance in this unforgiving desert. With 450 Credits left you push on, your eyes fixed on the distant horizon where the settlement lies. After what seems like an eternity, you finally crest a dune and see the glimmering towers of the settlement in the distance. You quicken your pace, feeling a surge of hope and relief at the sight. The town is within reach, but you\'ll need to be cautious - who knows what dangers might lurk in this unforgiving environment.',
-    buttons: []
+    buttons: ['']
   },
 
   theTravlerTradeStory: {
@@ -121,8 +151,9 @@ let scenario = {
   theTown: {
     text: 'lipsem'
   }
-
 };
 
 // *************************** EXECUTABLE CODE ****************************
 advanceTo(scenario.startingStory);
+renderButton();
+quitButton.addEventListener('click', handleQuitGame);

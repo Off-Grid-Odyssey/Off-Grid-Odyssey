@@ -34,15 +34,20 @@ header {
 h1 {
   margin: auto;
   font-size: 3.5em;
+  width: max-content;
 }
 
 nav {
   display: flex;
   justify-content: space-evenly;
+  
 }
 
 a {
   color: #b4c7c9;
+}
+a:link{
+  text-decoration: none;
 }
 
 section {
@@ -62,17 +67,20 @@ fieldset {
   flex-direction: column;
   color: #b4c7c9;
   /* background-color: rgb(24, 31, 39, .8); */
-  width: fit-content;
+  width:auto;
+  padding: 5% 0% 0% 0% ;
+  align-items:flex-start;
 }
 
 legend {
   padding: 2% 0% 0% 0%;
-  margin-bottom: 10%;
-  margin-left: 8%;
+  margin-bottom: 2%;
+  margin-left: 23%;
   /* border-bottom: #b4c7c9 solid; */
 }
 label{
   margin-bottom:5% ;
+  width: 50%;
   
 }
 input{
@@ -83,17 +91,19 @@ input{
 form {
   color: #b4c7c9;
   margin: auto;
+  
 }
 
 label {
   margin-top: 1%;
+  padding: 0% 0% 0% 1% ;
 }
 
 #adventurerForm {
   border: solid white;
-  width: 10%;
   background-color: rgb(24, 31, 39, .8);
   padding: .5%;
+  width: fit-content;
 }
 
 button:hover {

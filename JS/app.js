@@ -6,6 +6,7 @@
 let adventurerArray = [];
 console.log(adventurerArray);
 let main = document.querySelector('main');
+let playButton = document.getElementById('playButton');
 // ******************************** HELPER FUNCTION *************************
 //TODO: create playbutton event when clicked.
 function handlePlayButton(event) {
@@ -15,10 +16,9 @@ function handlePlayButton(event) {
 
 let renderButton = function () {
   main.appendChild(playButton);
-  // playButtonContainer.style.visibility('visible');
 };
 
-// ********************************** CONSTRUCTOR FUNCTION ***********************
+// *********************** CONSTRUCTOR FUNCTION ****************
 //TODO: Create new Adventurer constructor function
 function Adventurer(name, sex) {
   this.name = name;
@@ -26,9 +26,7 @@ function Adventurer(name, sex) {
   this.score = 0;
   this.highScore = 0;
 }
-// ******************************* FORM AND EVENT LISTENER ***************************
-let playButton = document.getElementById('playButton');
-let playButtonContainer = document.getElementById('playButtonContainer');
+// ******************** FORM AND EVENT LISTENER ***************************
 playButton.remove();
 
 let adventurerForm = document.getElementById('adventurerForm');
@@ -47,7 +45,7 @@ function handleFormSubmit(event) {
   
 
   if (name !== null) {
-    // adventurerForm.appendChild(playButton)
+    
     renderButton();
     adventurerForm.remove();
   }
@@ -57,10 +55,20 @@ function handleFormSubmit(event) {
   let newAdventurer = new Adventurer(name, sex);
   adventurerArray.unshift(newAdventurer);
 
-  let stringifiedAventurer = JSON.stringify(adventurerArray);
-  console.log(stringifiedAventurer);
 
-  localStorage.setItem('newAdventurer', stringifiedAventurer);
+  if(localStorage.getItem('newAdventurer')){
+    let parsedUsers = JSON.parse(localStorage.getItem('newAdventurer'));
+    adventurerArray = parsedUsers;
+    adventurerArray.unshift(newAdventurer);
+    let stringifiedAventurer = JSON.stringify(adventurerArray);
+    console.log(stringifiedAventurer);
+    localStorage.setItem('newAdventurer', stringifiedAventurer);
+  } else {
+    adventurerArray.unshift(newAdventurer);
+    let stringifiedAventurer = JSON.stringify(adventurerArray);
+    console.log(stringifiedAventurer);
+    localStorage.setItem('newAdventurer', stringifiedAventurer);
+  }
 }
 
 // ******************************** OBJECT LITERALS ******************************
