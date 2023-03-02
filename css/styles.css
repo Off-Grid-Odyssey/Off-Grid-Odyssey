@@ -5,10 +5,10 @@ body {
   -o-background-size: cover;
   background-size: cover;
   /* background-repeat: no-repeat; */
-  object-fit: cover; 
+  object-fit: cover;
 }
 
-div{
+div {
   border: solid white;
   width: 170px;
   padding: 1rem 1.3rem;
@@ -18,12 +18,12 @@ div{
   letter-spacing: .92px;
 }
 
-div:hover{
-  transform: scale(1.1); 
+div:hover {
+  transform: scale(1.1);
   background-color: #181f27;
 }
 
-header{
+header {
   color: #b4c7c9;
   width: 100%;
   display: flex;
@@ -31,22 +31,22 @@ header{
   gap: 5px;
 }
 
-h1{
+h1 {
   margin: auto;
+  font-size: 3.5em;
 }
 
-nav{
+nav {
   display: flex;
   justify-content: space-evenly;
 }
 
-a{
-  color:#b4c7c9;
-  /* color: #7AF07B; */
+a {
+  color: #b4c7c9;
 }
 
-section{
-  color:#b4c7c9;
+section {
+  color: #b4c7c9;
   margin-top: 2%;
   background-color: rgb(24, 31, 39, .8);
   width: 50%;
@@ -56,24 +56,24 @@ section{
   border: solid #b4c7c9;
 }
 
-fieldset{
+fieldset {
   display: flex;
   flex-direction: column;
-  color:#b4c7c9;
+  color: #b4c7c9;
   background-color: rgb(24, 31, 39, .8);
   width: fit-content;
 }
 
-form{
- color:#b4c7c9;
- margin: auto;
+form {
+  color: #b4c7c9;
+  margin: auto;
 }
 
-label{
+label {
   margin-top: 1%;
 }
 
-button{
+button {
   font-size: small;
   background-color: #181f27;
   color: #b4c7c9;
@@ -82,6 +82,6 @@ button{
   border: ridge #b4c7c9;
 }
 
-footer{
+footer {
   color: #b4c7c9;
 }

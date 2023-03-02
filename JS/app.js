@@ -4,7 +4,7 @@
 // ****************************** GLOBALS ******************************
 
 let adventurerArray = [];
-
+console.log(adventurerArray);
 // ******************************** HELPER FUNCTION *************************
 //TODO: create playbutton event when clicked.
 function handlePlayButton(event) {
@@ -24,6 +24,8 @@ function Adventurer(name, sex, startingLocation) {
 // ******************************* FORM AND EVENT LISTENER ***************************
 let playButton = document.getElementById('playButton');
 
+playButton.remove();
+
 let adventurerForm = document.getElementById('adventurerForm');
 
 // TODO: Create handle form submit function
@@ -33,19 +35,22 @@ function handleFormSubmit(event) {
   console.log(adventurerForm);
 
   // TODO: Create new Adventurer
-  // adventurerForm.addEventListener('submit',
-  //   function (event) {
-  // event.preventDefault();
-  const name = event.target.name.value;
+  let name = event.target.name.value;
   // console.log(name);
-  const sex = event.target.sex.value;
+  let sex = event.target.sex.value;
   // console.log(sex);
-  const startingLocation = event.target.startingLocation.value;
+  let startingLocation = event.target.startingLocation.value;
   // console.log(startingLocation);
 
+  if(name !== null){
+    adventurerForm.appendChild(playButton);
+  }
+
+
+  // Todo: Place new Adventurer into Local Storage
   let newAdventurer = new Adventurer(name, sex, startingLocation);
   adventurerArray.unshift(newAdventurer);
-  // Todo: Place new Adventurer into Local Storage
+
   let stringifiedAventurer = JSON.stringify(adventurerArray);
   console.log(stringifiedAventurer);
 
@@ -53,8 +58,6 @@ function handleFormSubmit(event) {
 }
 
 // ******************************** OBJECT LITERALS ******************************
-
-
 
 
 

@@ -1,18 +1,79 @@
-h1 {
-    text-align: center;
-    background-color: rgb(24, 31, 39, .8);
-    display: table;
-    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
-    /* font-size: 4em; */
+header {
     color: #b4c7c9;
-    padding: auto;
-    margin-bottom: 1%;
-    margin-left: 10%;
-    margin-right: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
 }
 
-li {
-    display: inline-block;
+h1 {
+    margin: auto;
+    font-size: 3.5em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a {
+    color: #b4c7c9;
+}
+
+.introSection {
+    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
+    color: #b4c7c9;
+    margin-top: 2%;
+    background-color: rgb(24, 31, 39, .8);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    border: solid #b4c7c9;
+}
+
+.storyText {
+    font-weight: bolder;
+
+}
+
+.optionSectionContainer {
+    padding-top: 2%;
+}
+
+.optionContainer {
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.optionTitle {
+    font-weight: bold;
+    padding-bottom: .5%;
+}
+
+.optionsText {
+    border: #b4c7c9 3px solid;
+    padding: 1%;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1%;
+}
+
+.buttonOption {
+    padding: 2%;
+    background-color: #181f27;
+    margin-top: 1%;
+}
+
+.buttonOption:hover {
+    transform: scale(1.1);
+    background-color: rgba(18, 23, 29, 0.8);
+
 }
 
 
@@ -22,146 +83,24 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    /* background-repeat: no-repeat; */
-    object-fit: cover; 
-  }
+    object-fit: cover;
+}
 
 footer {
-    /* text-align: center; */
+
     background-color: rgb(24, 31, 39, .8);
     display: table;
-    /* font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif; */
-    /* font-size: 4em; */
-    /* color: #b4c7c9; */
-    /* padding: 1%; */
-    /* margin-bottom: 1%; */
     margin-left: auto;
     margin-right: auto;
 
 }
 
-#pageLinks {
-    /* text-align: center; */
-    list-style-type: none;
-    /* display: ; */
-    /* background:  */
-    background-color: rgb(24, 31, 39, .8);
-    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
-    /* font-size: 4em; */
-    color: #b4c7c9;
-    /* padding: 1%; */
-    margin: 0;
-    padding: 0;
-    /* margin-bottom: 1%; */
-    margin-left: auto;
-    margin-right: auto;
-}
 
-#home {
-    display: table;
-    background-color: rgb(24, 31, 39, .8);
-    float: inline-start
-    margin-left: 10%;
-    margin-right: auto;
-}
 
-#highScore {
-    display: table;
-    background-color: rgb(24, 31, 39, .8);
-    float: inline-end;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-#aboutUs {
-    display: table;
-    background-color: rgb(24, 31, 39, .8);
-    float: inline-end;
-    margin-left: auto;
-    margin-right: 10%;
-}
-
-#introText {
-    text-align: left;
-    /* background:  */
-    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
-    /* font-size: 4em; */
-    color: #b4c7c9;
-    padding: 1%;
-    margin-bottom: 1%;
-}
-
-#option1 {
-    /* text-align: center; */
-    display: inline-block;
-    /* background:  */
-    background-color: rgb(24, 31, 39, .8);
-    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
-    /* font-size: 4em; */
-    color: #b4c7c9;
-    padding: 1%;
-    margin-bottom: 1%;
-}
-
-#option2 {
-    /* text-align: center; */
-    display: inline-block;
-    /* background:  */
-    background-color: rgb(24, 31, 39, .8);
-    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
-    /* font-size: 4em; */
-    color: #b4c7c9;
-    padding: 1%;
-    margin-bottom: 1%;
-}
-
-#option3 {
-    /* text-align: center; */
-    display: inline-block;
-    /* background:  */
-    background-color: rgb(24, 31, 39, .8);
-    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
-    /* font-size: 4em; */
-    color: #b4c7c9;
-    padding: 1%;
-    margin-bottom: 1%;
-}
-
-#chose1 {
-    text-align: center;
-    /* background:  */
-    background-color: rgb(24, 31, 39, .8);
-    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
-    /* font-size: 4em; */
-    color: #b4c7c9;
-    padding: 1%;
-    margin-bottom: 1%;
-}
-
-#chose2 {
-    text-align: center;
-    /* background:  */
-    background-color: rgb(24, 31, 39, .8);
-    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
-    /* font-size: 4em; */
-    color: #b4c7c9;
-    padding: 1%;
-    margin-bottom: 1%;
-}
-
-#chose3 {
-    text-align: center;
-    /* background:  */
-    background-color: rgb(24, 31, 39, .8);
-    font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
-    /* font-size: 4em; */
-    color: #b4c7c9;
-    padding: 1%;
-    margin-bottom: 1%;
-}
 
 #copyright {
-    background-color: rgb(24, 31, 39, .8);    
+    background-color: rgb(24, 31, 39, .8);
     font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
     /* font-size: 4em; */
     color: #b4c7c9;
