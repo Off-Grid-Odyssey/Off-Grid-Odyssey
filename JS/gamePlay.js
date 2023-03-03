@@ -181,7 +181,7 @@ let scenario = {
   },
   theTownTavern: {
     text: 'As you approach the tavern, you overhear a group of locals talking about the recent increase in dangerous activity in the nearby mountains. They mention that there have been sightings of strange creatures lurking around the peaks and that the settlement has activated a distress signal to warn travelers of the danger. The locals appear scared and unsure of what to do, but they do agree that the only way to survive the journey through the mountains is to be well-prepared and have the necessary equipment. You realize that if you want to reach your destination safely, you\'ll need to ensure you have the right equipment and provisions to tackle the dangerous terrain.',
-    buttons: [['Head towards the Market'], 'advanceTo(scenario.theLocalMarket)', ['Ask around for free supplies', 'advanceTo(scenario.askAround)']]
+    buttons: [['Head towards the Market', 'advanceTo(scenario.theLocalMarket)'], ['Ask around for free supplies', 'advanceTo(scenario.askAround)']]
   },
   theTownArguingSettlers: {
     text: 'As you approach the argument, you see a group of locals gathered around, but they\'re not arguing with anyone in particular. Instead, they seem to be arguing amongst themselves, all appearing too scared to venture into the mountains. They talk about the recent increase in strange occurrences and dangerous activity, and some suggest that the distress signal may not be enough to warn travelers of the danger. You realize that the situation in the mountains is worse than you initially thought and that you\'ll need to be cautious and well-prepared to survive the journey. You begin to plan and gather the necessary equipment and provisions to tackle the dangerous terrain.',
@@ -189,7 +189,7 @@ let scenario = {
   },
   theLocalMarket: {
     text: 'you decide to search for the local market to purchase the necessary supplies for your journey through the mountains. You ask a few locals for directions, and they direct you to a bustling marketplace in the center of the settlement. As you wander through the market, you find several vendors selling various supplies and equipment, including sturdy hiking boots, warm clothing, and portable food supplies. spending the remainder of your credits You carefully select and purchase the items you need, making sure to choose those that will be most useful for your journey through the dangerous terrain.',
-    buttons: [['Head towards the Mountains', 'advanceTo(scenario.theFootJourneyToMountain:)']]
+    buttons: [['Head towards the Mountains', 'advanceTo(scenario.theFootJourneyToMountain)']]
   },
   askAround: {
     text: 'you realize that you may not have enough coins to purchase all the supplies you need for the journey through the mountains. You decide to ask around the settlement to see if anyone is willing to donate or lend you some of the necessary supplies. You approach a few locals and explain your situation, and they point you in the direction of a kind-hearted villager who is known for helping travelers in need. You find the villager and explain your situation, and they graciously offer to lend you some of the supplies you need for your journey. With the generous help of the locals, you feel confident and well-prepared for the dangerous terrain ahead.',
