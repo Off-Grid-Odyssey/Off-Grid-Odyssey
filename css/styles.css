@@ -37,13 +37,12 @@ h1 {
   margin: auto;
   font-size: 3.5em;
   width: max-content;
-  /* font-family: Cinzel; */
+  font-family: Cinzel;
 }
 
 nav {
   display: flex;
   justify-content: space-evenly;
-
 }
 
 a {
