@@ -21,6 +21,10 @@ nav {
   justify-content: space-evenly;
 }
 
+a:hover{
+  transform: scale(1.1);
+}
+
 a {
   color: #b4c7c9;
 }
@@ -49,7 +53,8 @@ section {
 h1 {
   margin: auto;
   font-size: 3.5em;
-  /* font-family: Phudu; */
+  width: max-content;
+  font-family: Cinzel;
 }
 
 h2{

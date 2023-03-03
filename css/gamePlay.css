@@ -10,7 +10,8 @@ header {
 h1 {
     margin: auto;
     font-size: 3.5em;
-    /* font-family: Space Mono; */
+    width: max-content;
+    font-family: Cinzel;
 }
 
 nav {
@@ -21,6 +22,13 @@ nav {
 a {
     color: #b4c7c9;
     text-decoration: none;
+}
+a:hover{
+    transform: scale(1.1);
+}
+#quit:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .introSection {
@@ -107,6 +115,12 @@ footer {
     background-color: transparent;
 }
 
-buttons{
-    background-color: blue;
+button{
+    color: #b4c7c9;
+    background-color: rgb(24, 31, 39, .8);
+    border: solid 2px #b4c7c9;
+}
+
+button:hover{
+    transform: scale(1.1);
 }
