@@ -49,7 +49,8 @@ section {
 h1 {
   margin: auto;
   font-size: 3.5em;
-  /* font-family: Phudu; */
+  width: max-content;
+  font-family: Cinzel;
 }
 
 h2{
