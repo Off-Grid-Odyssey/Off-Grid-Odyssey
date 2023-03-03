@@ -21,6 +21,10 @@ nav {
   justify-content: space-evenly;
 }
 
+a:hover{
+  transform: scale(1.1);
+}
+
 a {
   color: #b4c7c9;
 }
