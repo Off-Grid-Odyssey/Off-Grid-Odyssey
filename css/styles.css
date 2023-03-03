@@ -64,6 +64,9 @@ section {
   padding: 1%;
   border: solid #b4c7c9;
   margin-bottom: 3%;
+  font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
+  font-weight: bolder;
+  line-height: 115%;
 }
 
 fieldset {
