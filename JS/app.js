@@ -25,7 +25,7 @@ function Adventurer(name, sex, startingLocation) {
   this.sex = sex;
   this.startingLocation = startingLocation;
   this.score = 0;
-  this.highScore = 0;
+  this.credits = 500;
 }
 // ******************** FORM AND EVENT LISTENER ***************************
 playButton.remove();
