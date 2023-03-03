@@ -24,6 +24,8 @@ let buttonContainer = document.getElementsByClassName('buttonContainer');
 console.log(buttonContainer);
 let quitButton = document.getElementById('quit');
 let navigate = document.querySelector('nav');
+let playerName = JSON.parse(localStorage.getItem('newAdventurer'));
+
 
 // ***** RENDER BUTTON ******
 let renderButton = function(){
@@ -46,8 +48,6 @@ let saveHighScore = function () {
   parsedUsers[0].score = score;
   let stringParsedUsers = JSON.stringify(parsedUsers);
   localStorage.setItem('newAdventurer', stringParsedUsers);
-}
-
 };
 
 
@@ -86,7 +86,7 @@ function handleQuitGame(event){
 
 let scenario = {
   startingStory: {
-    text: 'You are Captain [Name], a seasoned explorer and captain of your own spaceship. Your latest mission has brought you to the desolate desert planet of Xirra, where you\'ve picked up a distress signal from a remote settlement. As you approach the planet, you see the wreckage of a ship on the surface below. What will you do, Captain [Name]? The fate of Xirra and your own journey rests in your hands.',
+    text: `You are Captain ${playerName[0].name}, a seasoned explorer and captain of your own spaceship. Your latest mission has brought you to the desolate desert planet of Xirra, where you\'ve picked up a distress signal from a remote settlement. As you approach the planet, you see the wreckage of a ship on the surface below. What will you do, Captain ${playerName[0].name}? The fate of Xirra and your own journey rests in your hands.`,
     buttons: [['Investigate Shipwreck', 'advanceTo(scenario.investigateCrash)'], ['Fly to Settlement', 'advanceTo(scenario.flyToTown)'], ['Monitor from orbit', 'advanceTo(scenario.monitor)']]
   },
 

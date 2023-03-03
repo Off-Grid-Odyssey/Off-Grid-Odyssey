@@ -4,8 +4,10 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  object-fit: cover; 
-  margin 50px;
+  object-fit: cover;
+  background-repeat: no-repeat ;
+  background-position: center center ;
+  background-attachment: fixed;
 }
 
 header{
@@ -42,9 +44,9 @@ h2{
   text-align: center; 
 }
 
-img{
-  width: 35vw;
-  height: 70vh;
+#andrew,#ryan,#dasha,#emmanuel{
+  width: 450px;
+  height: 500px;
   border: 3px;
   border-style: ridge; 
 }
@@ -59,7 +61,7 @@ img{
   justify-content: space-evenly;
 }
 
- figure {
+figure {
   width: min-content;
 }
 
