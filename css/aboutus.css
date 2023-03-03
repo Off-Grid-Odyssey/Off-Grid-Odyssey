@@ -75,7 +75,8 @@ p{
 
 
 footer{
-  text-align: center;
   color: #b4c7c9;
+  position: relative;
+  bottom: 0;
 }
 

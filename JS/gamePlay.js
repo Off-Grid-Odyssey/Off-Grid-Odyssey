@@ -46,9 +46,8 @@ let saveHighScore = function () {
   parsedUsers[0].score = score;
   let stringParsedUsers = JSON.stringify(parsedUsers);
   localStorage.setItem('newAdventurer', stringParsedUsers);
-}
-
 };
+
 
 
 
