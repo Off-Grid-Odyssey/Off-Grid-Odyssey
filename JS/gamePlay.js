@@ -53,6 +53,7 @@ let saveHighScore = function () {
 
 
 
+
 // advances the game
 let advanceTo = function (s) {
   changeButtons(s.buttons);
