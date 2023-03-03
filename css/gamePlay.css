@@ -10,6 +10,7 @@ header {
 h1 {
     margin: auto;
     font-size: 3.5em;
+    /* font-family: Space Mono; */
 }
 
 nav {
@@ -19,6 +20,7 @@ nav {
 
 a {
     color: #b4c7c9;
+    text-decoration: none;
 }
 
 .introSection {
@@ -87,12 +89,9 @@ body {
 }
 
 footer {
-
-    background-color: rgb(24, 31, 39, .8);
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
-
+    color: #b4c7c9;
+    position: fixed;
+    bottom: 0;
 }
 
 
@@ -104,4 +103,9 @@ footer {
     font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
     /* font-size: 4em; */
     color: #b4c7c9;
+    background-color: transparent;
+}
+
+buttons{
+    background-color: blue;
 }
