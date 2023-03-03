@@ -1,4 +1,13 @@
 
+body {
+  background: url(../img/background.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  object-fit: cover;
+}
+
 header {
   color: #b4c7c9;
   width: 100%;
@@ -12,63 +21,79 @@ nav {
   justify-content: space-evenly;
 }
 
+a:hover{
+  transform: scale(1.1);
+}
+
 a {
   color: #b4c7c9;
 }
 
-body {
-  background: url(../img/background.jpg);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  /* background-repeat: no-repeat; */
-  object-fit: cover;
+a:link{
+  text-decoration: none; 
 }
 
 main{
   width: 100%;
   height: 500px;
-  margin: auto;
+  margin-top: 5%;
   text-align: center;
-}
 
+} 
 
 section {
   color: #b4c7c9;
   margin-top: 2%;
-  background-color: rgb(24, 31, 39, .8);
   width: 50%;
   margin-left: auto;
   margin-right: auto;
   padding: 1%;
-  border: solid #b4c7c9;
 }
-
 
 h1 {
   margin: auto;
   font-size: 3.5em;
+  width: max-content;
+  font-family: Cinzel;
 }
 
 h2{
-  font-size: larger;
+  font-size: 2em;
 }
 
-
 #highScoreContainer{
-
-  border: 2px solid;
-  /* width: */
-  height: 250px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: fit-content;
   margin: auto;
+  gap: 15px;
+}
 
+#highScoreBox{
+  text-align: center;
+  background-color: rgb(24, 31, 39, .8);
+  padding: 10px;
+  align-self: center;
+  width: 100%;
 
+}
+
+td, th, tr{
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+th{
+  font-weight: 900;
 }
 
 footer {
-  text-align: center;
   color: #b4c7c9;
-
+  position: fixed;
+  bottom: 0;
 }
-

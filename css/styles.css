@@ -4,8 +4,10 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  /* background-repeat: no-repeat; */
   object-fit: cover;
+  background-repeat: no-repeat ;
+  background-position: center center ;
+  background-attachment: fixed;
 }
 
 div {
@@ -34,6 +36,8 @@ header {
 h1 {
   margin: auto;
   font-size: 3.5em;
+  width: max-content;
+  font-family: Cinzel;
 }
 
 nav {
@@ -41,8 +45,16 @@ nav {
   justify-content: space-evenly;
 }
 
+a:hover{
+  transform: scale(1.1);
+}
+
 a {
   color: #b4c7c9;
+}
+
+a:link {
+  text-decoration: none;
 }
 
 section {
@@ -55,6 +67,9 @@ section {
   padding: 1%;
   border: solid #b4c7c9;
   margin-bottom: 3%;
+  font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
+  font-weight: bolder;
+  line-height: 115%;
 }
 
 fieldset {
@@ -62,38 +77,45 @@ fieldset {
   flex-direction: column;
   color: #b4c7c9;
   /* background-color: rgb(24, 31, 39, .8); */
-  width: fit-content;
+  width: auto;
+  padding: 5% 0% 0% 0%;
+  align-items: flex-start;
 }
 
 legend {
   padding: 2% 0% 0% 0%;
-  margin-bottom: 10%;
-  margin-left: 8%;
+  margin-bottom: 2%;
+  margin-left: 23%;
   /* border-bottom: #b4c7c9 solid; */
 }
-label{
-  margin-bottom:5% ;
-  
+
+label {
+  margin-bottom: 5%;
+  width: 50%;
+
 }
-input{
+
+input {
   margin-top: 2%;
-  
+
 }
 
 form {
   color: #b4c7c9;
   margin: auto;
+
 }
 
 label {
   margin-top: 1%;
+  padding: 0% 0% 0% 1%;
 }
 
 #adventurerForm {
   border: solid white;
-  width: 10%;
   background-color: rgb(24, 31, 39, .8);
   padding: .5%;
+  width: fit-content;
 }
 
 button:hover {
@@ -117,4 +139,6 @@ button {
 
 footer {
   color: #b4c7c9;
+  position: fixed;
+  bottom: 0;
 }

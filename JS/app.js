@@ -6,6 +6,7 @@
 let adventurerArray = [];
 console.log(adventurerArray);
 let main = document.querySelector('main');
+let playButton = document.getElementById('playButton');
 // ******************************** HELPER FUNCTION *************************
 //TODO: create playbutton event when clicked.
 function handlePlayButton(event) {
@@ -15,20 +16,18 @@ function handlePlayButton(event) {
 
 let renderButton = function () {
   main.appendChild(playButton);
-  // playButtonContainer.style.visibility('visible');
 };
 
-// ********************************** CONSTRUCTOR FUNCTION ***********************
+// *********************** CONSTRUCTOR FUNCTION ****************
 //TODO: Create new Adventurer constructor function
-function Adventurer(name, sex) {
+function Adventurer(name, sex, startingLocation) {
   this.name = name;
   this.sex = sex;
+  this.startingLocation = startingLocation;
   this.score = 0;
-  this.highScore = 0;
+  this.credits = 500;
 }
-// ******************************* FORM AND EVENT LISTENER ***************************
-let playButton = document.getElementById('playButton');
-let playButtonContainer = document.getElementById('playButtonContainer');
+// ******************** FORM AND EVENT LISTENER ***************************
 playButton.remove();
 
 let adventurerForm = document.getElementById('adventurerForm');
@@ -41,20 +40,19 @@ function handleFormSubmit(event) {
 
   // TODO: Create new Adventurer
   let name = event.target.name.value;
-  // console.log(name);
   let sex = event.target.sex.value;
-  // console.log(sex);
-  
+  let startingLocation = event.target.startingLocation.value;
+
 
   if (name !== null) {
-    // adventurerForm.appendChild(playButton)
+    
     renderButton();
     adventurerForm.remove();
   }
 
 
   // Todo: Place new Adventurer into Local Storage
-  let newAdventurer = new Adventurer(name, sex);
+  let newAdventurer = new Adventurer(name, sex, startingLocation);
   adventurerArray.unshift(newAdventurer);
 
 

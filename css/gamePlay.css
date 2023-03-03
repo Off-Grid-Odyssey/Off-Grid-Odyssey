@@ -10,6 +10,8 @@ header {
 h1 {
     margin: auto;
     font-size: 3.5em;
+    width: max-content;
+    font-family: Cinzel;
 }
 
 nav {
@@ -19,6 +21,14 @@ nav {
 
 a {
     color: #b4c7c9;
+    text-decoration: none;
+}
+a:hover{
+    transform: scale(1.1);
+}
+#quit:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .introSection {
@@ -31,6 +41,7 @@ a {
     margin-right: auto;
     padding: 1%;
     border: solid #b4c7c9;
+    line-height: 115%;
 }
 
 .storyText {
@@ -87,12 +98,9 @@ body {
 }
 
 footer {
-
-    background-color: rgb(24, 31, 39, .8);
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
-
+    color: #b4c7c9;
+    position: fixed;
+    bottom: 0;
 }
 
 
@@ -104,4 +112,15 @@ footer {
     font-family: "CenturyGothic", CenturyGothic, AppleGothic, sans-serif;
     /* font-size: 4em; */
     color: #b4c7c9;
+    background-color: transparent;
+}
+
+button{
+    color: #b4c7c9;
+    background-color: rgb(24, 31, 39, .8);
+    border: solid 2px #b4c7c9;
+}
+
+button:hover{
+    transform: scale(1.1);
 }
