@@ -2,6 +2,8 @@
 
 ## About the App
 
+Text based adventure utilizing local storagr for persistant data. This game has different stories based on user input.  
+
 Embark on a perilous journey through the galaxy in this thrilling text-based adventure game. As a seasoned
 explorer and captain of your own spaceship, you'll travel to one alien planet,  with its own unique
 challenges and dangers. Explore desolate deserts, lush forests, and frozen wastelands, uncovering the secrets of a
